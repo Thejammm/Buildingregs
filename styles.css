@@ -1,0 +1,488 @@
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 20px; 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+    line-height: 1.4;
+    min-height: 100vh;
+}
+
+/* Container */
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.header { 
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); 
+    color: white; 
+    padding: 20px; 
+    margin: -20px -20px 20px -20px; 
+    text-align: center; 
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-logo-left {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 60px;
+    z-index: 3;
+}
+
+.header-logo-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 60px;
+    z-index: 3;
+}
+
+.chapter-two-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-main-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.chapter-word {
+    color: #0ea5e9;
+}
+
+.two-word {
+    color: #6b7280;
+}
+
+.logo-underline {
+    width: 100%;
+    height: 3px;
+    background: #0ea5e9;
+    margin: 2px 0;
+    border-radius: 1px;
+}
+
+.consulting-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* Project Info Section */
+.project-info { 
+    background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%); 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    border: 2px solid #e2e8f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.project-info input { 
+    margin: 5px; 
+    padding: 10px; 
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    width: 200px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.project-info input:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Button Groups */
+.button-group {
+    margin: 15px 0;
+}
+
+/* Buttons */
+.btn { 
+    background: transparent; 
+    color: #0ea5e9; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 0; 
+    cursor: pointer; 
+    margin: 5px; 
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #0ea5e9;
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+}
+
+.btn:hover:not(:disabled)::after {
+    width: 100%;
+}
+
+.btn:hover:not(:disabled) {
+    background: transparent;
+    color: #0ea5e9;
+}
+
+.btn:disabled {
+    background: transparent;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.btn:disabled::after {
+    display: none;
+}
+
+.btn.pdf-btn {
+    color: #dc2626;
+}
+
+.btn.pdf-btn::after {
+    background-color: #dc2626;
+}
+
+.btn.pdf-btn:hover:not(:disabled) {
+    color: #dc2626;
+}
+
+.btn.export-btn {
+    color: #10b981;
+}
+
+.btn.export-btn::after {
+    background-color: #10b981;
+}
+
+.btn.export-btn:hover:not(:disabled) {
+    color: #10b981;
+}
+
+.btn.import-btn {
+    color: #6366f1;
+}
+
+.btn.import-btn::after {
+    background-color: #6366f1;
+}
+
+.btn.import-btn:hover:not(:disabled) {
+    color: #6366f1;
+}
+
+.btn.danger-btn {
+    color: #f59e0b;
+}
+
+.btn.danger-btn::after {
+    background-color: #f59e0b;
+}
+
+.btn.danger-btn:hover:not(:disabled) {
+    color: #f59e0b;
+}
+
+.pdf-status {
+    font-size: 12px;
+    margin-left: 10px;
+    font-style: italic;
+    opacity: 0.9;
+    color: #64748b;
+    font-weight: 400;
+}
+
+/* Summary Section */
+.summary { 
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    border: 2px solid #10b981;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.1);
+}
+
+/* Approved Documents */
+.approved-doc { 
+    background: white; 
+    border: 2px solid #e2e8f0; 
+    margin: 15px 0; 
+    border-radius: 12px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.doc-header { 
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%); 
+    color: white; 
+    padding: 16px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: all 0.3s ease;
+    user-select: none;
+    border-bottom: 3px solid #0ea5e9;
+}
+
+.doc-header:hover { 
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    transform: translateY(-1px);
+}
+
+.doc-content { 
+    display: none; 
+    padding: 20px; 
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.doc-content.open { 
+    display: block; 
+}
+
+/* Requirements */
+.requirement { 
+    background: white; 
+    border: 2px solid #e2e8f0; 
+    margin: 15px 0; 
+    padding: 20px; 
+    border-radius: 10px; 
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.requirement:hover {
+    border-color: #0ea5e9;
+    box-shadow: 0 5px 20px rgba(14, 165, 233, 0.1);
+}
+
+.requirement-text { 
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); 
+    padding: 15px; 
+    margin-bottom: 15px; 
+    border-radius: 8px; 
+    font-size: 14px; 
+    border-left: 4px solid #f59e0b; 
+    font-weight: 500;
+}
+
+/* Compliance Area */
+.compliance-area { 
+    margin-top: 15px; 
+}
+
+.compliance-select { 
+    padding: 10px; 
+    margin-right: 10px; 
+    border: 2px solid #e2e8f0; 
+    border-radius: 8px;
+    min-width: 150px;
+    font-family: inherit;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.compliance-select:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Comment Sections */
+.comment-section {
+    margin-bottom: 20px;
+}
+
+.comment-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-size: 15px;
+}
+
+.compliance-text { 
+    width: 100%; 
+    min-height: 60px; 
+    padding: 12px; 
+    border: 2px solid #e2e8f0; 
+    border-radius: 8px; 
+    margin-top: 5px; 
+    margin-bottom: 10px;
+    font-family: inherit;
+    resize: none; /* Disable manual resize since we're auto-resizing */
+    overflow: hidden; /* Hide scrollbars since we're auto-resizing */
+    transition: all 0.3s ease; /* Smooth height transitions */
+    line-height: 1.4; /* Consistent line height for better calculations */
+    box-sizing: border-box; /* Include padding in height calculations */
+    background: white;
+}
+
+.compliance-text:focus {
+    border-color: #0ea5e9;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* Auto-resize specific styling */
+.compliance-text.auto-resize {
+    height: auto; /* Let JavaScript control the height */
+}
+
+/* Status Styling */
+.compliant { 
+    border-left: 4px solid #10b981;
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    box-shadow: 0 3px 12px rgba(16, 185, 129, 0.2);
+}
+
+.not-compliant { 
+    border-left: 4px solid #dc2626;
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    box-shadow: 0 3px 12px rgba(220, 38, 38, 0.2);
+}
+
+.not-applicable { 
+    border-left: 4px solid #6b7280;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    box-shadow: 0 3px 12px rgba(107, 114, 128, 0.2);
+}
+
+/* Message Styling */
+.error-message {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    color: #991b1b;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px solid #dc2626;
+    display: none;
+    font-weight: 500;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px solid #10b981;
+    display: none;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .project-info input {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .header h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        margin: 0;
+        background: white;
+    }
+    
+    .container {
+        box-shadow: none;
+        margin: 0;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    .project-info {
+        background: white;
+        border: 1px solid #ccc;
+    }
+    
+    .requirement {
+        page-break-inside: avoid;
+    }
+    
+    .header {
+        background: #2d3748 !important;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}

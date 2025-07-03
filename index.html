@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Regulations Compliance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Left Logo -->
+            <div class="header-logo-left">
+                <div class="chapter-two-logo">
+                    <div class="logo-main-text">
+                        <span class="chapter-word">CHAPTER</span> <span class="two-word">TWO</span>
+                    </div>
+                    <div class="logo-underline"></div>
+                    <div class="consulting-text">Consulting</div>
+                </div>
+            </div>
+            
+            <!-- Right Logo -->
+            <div class="header-logo-right">
+                <div class="chapter-two-logo">
+                    <div class="logo-main-text">
+                        <span class="chapter-word">CHAPTER</span> <span class="two-word">TWO</span>
+                    </div>
+                    <div class="logo-underline"></div>
+                    <div class="consulting-text">Consulting</div>
+                </div>
+            </div>
+            
+            <h1>Building Regulations Compliance Tracker</h1>
+            <p>Track design decisions against Approved Documents A-T</p>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+
+        <div class="project-info">
+            <strong>Project Details:</strong><br><br>
+            <input type="text" id="projectName" placeholder="Project Name" maxlength="100">
+            <input type="text" id="projectRef" placeholder="Project Reference" maxlength="50">
+            <input type="text" id="designerName" placeholder="Designer Name" maxlength="100">
+            <button class="btn" onclick="saveProject()">Save Project</button>
+            
+            <div class="button-group">
+                <strong>Reports & Data Management:</strong><br><br>
+                <button class="btn pdf-btn" id="pdfBtn" onclick="generatePDFReport()">
+                    📄 Generate PDF Report
+                    <span class="pdf-status" id="pdfStatus">Ready</span>
+                </button>
+                <button class="btn" onclick="generateReport()">🖨️ Print Report</button>
+                <button class="btn" onclick="generateMergeReport()">📋 Final Merged Report</button>
+                <button class="btn export-btn" onclick="exportProjectData()">💾 Export Data</button>
+                <button class="btn import-btn" onclick="importProjectData()">📂 Import Data</button>
+                <button class="btn import-btn" onclick="mergeProjectData()">🔀 Merge Multiple Files</button>
+                <button class="btn danger-btn" onclick="clearAllData()">🗑️ Clear All Data</button>
+            </div>
+        </div>
+
+        <div class="summary" id="summary">
+            <strong>Compliance Summary:</strong> <span id="summaryText">Complete the requirements below</span>
+        </div>
+
+        <div id="approvedDocs">
+            <!-- Approved Documents will be generated here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
